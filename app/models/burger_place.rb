@@ -1,0 +1,2 @@
+class BurgerPlace < ApplicationRecord
+end
