@@ -6,22 +6,22 @@
 #
 default: &default
   adapter: postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  encoding: unicode
+  database: hooks_api
+  pool: 5
   username: nirkaufman
   password:
 
-
 development:
   <<: *default
-  database: hooks_db
+  database: hooks_api
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: hooks_db
+  database: hooks_api
 
 production:
   <<: *default
